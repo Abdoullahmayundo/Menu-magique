@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+:root{
+    --clr:#222327;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+} 
+
+.navigation{
+    width: 450px;
+    height: 70px;
+    background: linear-gradient(rgba(160, 158, 158, 0.7), rgba(194, 179, 179, 0.7)), url(../imageMagique/bg.jpg) no-repeat;
+    background-position: center;
+    position: relative;
+    color:var(--text-color);
+    padding: 10px 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.navigation ul{
+    display: flex;
+    width: 400px;
+}
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+} 
+.navigation ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--clr);
+}
+
+/*Animation des icones*/
+.navigation ul li:hover a .icon{
+    transform: translateY(-50px);
+}
+.navigation ul li a .text{
+    position: absolute;
+    color: var(--clr);
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10%);
+}
+.navigation ul li:hover a .text{
+    opacity: 1;
+    transform: translate(10px);
+}
+
+/*mise en forme des images*/
+img{
+    width: 20px;
+}

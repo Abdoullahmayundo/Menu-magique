@@ -13,13 +13,13 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: black;
+    background: rgb(199, 62, 62);
 } 
 
 .navigation{
     width: 450px;
     height: 70px;
-    background: linear-gradient(rgba(160, 158, 158, 0.7), rgba(194, 179, 179, 0.7)), url(../imageMagique/bg.jpg) no-repeat;
+    background: linear-gradient(rgba(160, 158, 158, 0.7), rgba(194, 179, 179, 0.7)), url(../image-magique/bg.jpg) no-repeat;
     background-position: center;
     position: relative;
     color:var(--text-color);
@@ -59,11 +59,13 @@ body{
     text-align: center;
     transition: 0.5s;
     color: var(--clr);
+    z-index: 2;
 }
 
 /*Animation des icones*/
 .navigation ul li:hover a .icon{
-    transform: translateY(-50px);
+    transform: translateX(50px);
+    opacity: -20;
 }
 .navigation ul li a .text{
     position: absolute;
@@ -74,11 +76,11 @@ body{
     transition: 0.5s;
     text-align: center;
     opacity: 0;
-    transform: translateY(10%);
+    transform: translateY(20px);
 }
 .navigation ul li:hover a .text{
-    opacity: 1;
-    transform: translate(10px);
+    opacity: 7;
+    transform: translate(0);
 }
 
 /*mise en forme des images*/
@@ -108,4 +110,20 @@ body{
     opacity: 1;
     transform: translate(0);
 }
+}
+
+
+/*gestion du bouton animation lors d'un clique*/
+.navigation ul li:hover{
+    #Animation{
+        background-color: rgb(96, 94, 231);
+        display: flex;
+        position: absolute;
+        width: 70px;
+        height: 60px;
+        border-radius:10px 10px;
+        border: 5px solid rgb(199, 62, 62);
+        transition: 0.2s;
+        transform: translateY(20px);
+    }
 }
